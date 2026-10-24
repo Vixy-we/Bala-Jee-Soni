@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUG · Bala Jee Soni | Engineer, Founder, Dreamer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="grain-overlay"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <div class="loader" id="loader">
+        <div class="loader-name" id="loader-name">
+            <span>B</span><span>a</span><span>l</span><span>a</span><span>&nbsp;</span><span>J</span><span>e</span><span>e</span><span>&nbsp;</span><span>S</span><span>o</span><span>n</span><span>i</span>
+        </div>
+        <div class="loader-line" id="loader-line"></div>
+        <div class="loader-status" id="loader-status">initialising...</div>
+    </div>
+
+    <!-- Main Content Wrapped for Lenis -->
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <section class="hero" id="hero">
+                <canvas id="particle-canvas"></canvas>
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <span class="accent-font hero-label">Mechanical Engineering · Robotics · Sustainable Technology</span>
+                        <h1 class="hero-name" aria-label="Bala Jee Soni, engineering robots with purpose">
+                            <span class="hero-title-main">Bala Jee Soni</span>
+                            <span class="hero-title-ornament"><span class="hero-sticker">FOR</span><span class="accent-font">Robots</span> <span class="hero-dim">with</span> <span class="hero-circuits">Purpose</span></span>
+                        </h1>
+                        <p class="hero-desc text-text">Mechanical Engineering · Design &amp; Simulation · Robotics.<br>Building functional machines through CAD, kinematics, and hands-on experimentation.</p>
+                        <div class="btn-row">
+                            <a href="#projects" class="btn magnetic interactive-element" data-strength="30">View My Work ↓</a>
+                            <a href="#spc" class="btn magnetic interactive-element" data-strength="30">Solarpunk Corps ↗</a>
+                        </div>
+                    </div>
+                    <div class="hero-gallery" aria-label="Two overlapping glass photo cards">
+                        <article class="glass-card card-one">
+                            <img
+                                src="pic2.png"
+                                alt="Bala Jee Soni standing outdoors"
+                            >
+                        </article>
+                        <article class="glass-card card-two">
+                            <img
+                                src="pic1.jpg"
+                                alt="Bala Jee Soni presenting a sustainability project"
+                            >
+                        </article>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <span class="accent-font">scroll</span>
+                    <div class="scroll-line"></div>
+                </div>
+            </section>
+
+            <section class="marquee-section">
+                <div class="marquee-fade"></div>
+                <!-- Row 1: Big Tech Icons (Left) -->
+                <div class="marquee-row">
+                    <div class="marquee-content">
+                        <div class="tech-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+                        <div class="tech-item"><i class="devicon-cplusplus-plain"></i><span>C++</span></div>
+                        <div class="tech-item"><i class="devicon-arduino-plain"></i><span>Arduino</span></div>
+                        <div class="tech-item"><i class="devicon-linux-plain"></i><span>Linux</span></div>
+                        <div class="tech-item"><i class="devicon-react-original"></i><span>React.js</span></div>
+                        <div class="tech-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+                        <div class="tech-item"><i class="devicon-git-plain"></i><span>Git</span></div>
+                    </div>
+                    <div class="marquee-content" aria-hidden="true">
+                        <div class="tech-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+                        <div class="tech-item"><i class="devicon-cplusplus-plain"></i><span>C++</span></div>
+                        <div class="tech-item"><i class="devicon-arduino-plain"></i><span>Arduino</span></div>
+                        <div class="tech-item"><i class="devicon-linux-plain"></i><span>Linux</span></div>
+                        <div class="tech-item"><i class="devicon-react-original"></i><span>React.js</span></div>
+                        <div class="tech-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+                        <div class="tech-item"><i class="devicon-git-plain"></i><span>Git</span></div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Big Tech Icons (Right) -->
+                <div class="marquee-row">
+                    <div class="marquee-content">
+                        <div class="tech-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                        <div class="tech-item"><i class="devicon-ubuntu-plain"></i><span>Ubuntu</span></div>
+                        <div class="tech-item"><i class="devicon-raspberrypi-plain"></i><span>Raspberry Pi</span></div>
+                        <div class="tech-item"><i class="devicon-bash-plain"></i><span>Bash</span></div>
+                        <div class="tech-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+                        <div class="tech-item"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
+                        <div class="tech-item"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
+                        <div class="tech-item"><i class="devicon-vscode-plain"></i><span>VS Code</span></div>
+                    </div>
+                    <div class="marquee-content" aria-hidden="true">
+                        <div class="tech-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                        <div class="tech-item"><i class="devicon-ubuntu-plain"></i><span>Ubuntu</span></div>
+                        <div class="tech-item"><i class="devicon-raspberrypi-plain"></i><span>Raspberry Pi</span></div>
+                        <div class="tech-item"><i class="devicon-bash-plain"></i><span>Bash</span></div>
+                        <div class="tech-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+                        <div class="tech-item"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
+                        <div class="tech-item"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
+                        <div class="tech-item"><i class="devicon-vscode-plain"></i><span>VS Code</span></div>
+                    </div>
+                </div>
+
+                <!-- Row 3: Advanced Tech & Mechanics -->
+                <div class="marquee-row">
+                    <div class="marquee-content">
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3" />
+                                <circle cx="6" cy="12" r="3" />
+                                <circle cx="18" cy="19" r="3" />
+                                <path d="M8.59 13.51l6.83 3.98m-.01-10.98l-6.82 3.98" />
+                            </svg>
+                            <span>ROS2</span>
+                        </div>
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
+                            </svg>
+                            <span>Hugging Face</span>
+                        </div>
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
+                                <path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" />
+                            </svg>
+                            <span>KiCad</span>
+                        </div>
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+                                <path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" />
+                            </svg>
+                            <span>FreeCAD</span>
+                        </div>
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M21 19c0 1.66-4.03 3-9 3s-9-1.34-9-3V5c0 1.66 4.03 3 9 3s9-1.34 9-3v14z" />
+                            </svg>
+                            <span>SolidWorks</span>
+                        </div>
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18" />
+                            </svg>
+                            <span>ANSYS</span>
+                        </div>
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 2v14M7 7l5-5 5 5M4 20h16M4 22h16" />
+                            </svg>
+                            <span>Google Antigravity</span>
+                        </div>
+                    </div>
+                    <div class="marquee-content" aria-hidden="true">
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3" />
+                                <circle cx="6" cy="12" r="3" />
+                                <circle cx="18" cy="19" r="3" />
+                                <path d="M8.59 13.51l6.83 3.98m-.01-10.98l-6.82 3.98" />
+                            </svg>
+                            <span>ROS2</span>
+                        </div>
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
+                            </svg>
+                            <span>Hugging Face</span>
+                        </div>
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
+                                <path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" />
+                            </svg>
+                            <span>KiCad</span>
+                        </div>
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+                                <path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" />
+                            </svg>
+                            <span>FreeCAD</span>
+                        </div>
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M21 19c0 1.66-4.03 3-9 3s-9-1.34-9-3V5c0 1.66 4.03 3 9 3s9-1.34 9-3v14z" />
+                            </svg>
+                            <span>SolidWorks</span>
+                        </div>
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18" />
+                            </svg>
+                            <span>ANSYS</span>
+                        </div>
+                        <div class="tech-item">
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 2v14M7 7l5-5 5 5M4 20h16M4 22h16" />
+                            </svg>
+                            <span>Google Antigravity</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="container">
+                <div class="about-grid">
+                    <div class="svg-container">
+                        <svg viewBox="-125 -125 250 250" xmlns="http://www.w3.org/2000/svg" id="about-svg" role="img"
+                            aria-label="Animated planetary gear system with a sun gear, three planet gears and a fixed ring gear"></svg>
+                        <p class="gear-caption">Planetary set · Sun Z12, planets Z18 ×3, ring Z48. Ring fixed, sun
+                            driving, carrier out: 5:1 reduction.</p>
+                    </div>
+                    <div class="about-text">
+                        <span class="accent-font section-label gs-reveal-up">about me</span>
+                        <h2 class="section-title gs-reveal-up">Jack of All Trades.<br>Proud of It.</h2>
+                        <div class="text-block">
+                            <p>Mechanical engineering student at BIET Jhansi, focused on mechatronics, robotics, and purposeful systems.</p>
+                            <p>Founder of Solarpunk Corps, a collaborative community built on peer learning and sustainable technology.</p>
+                            <p>Beyond engineering, I study history, literature, and art. Cross-disciplinary perspective builds better, more human machines.</p>
+                        </div>
+                        <span class="accent-font about-detail gs-reveal-up">B.Tech Mechanical Engineering · BIET Jhansi · Class of 2027</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="container">
+                <span class="accent-font section-label gs-reveal-up">existing projects and work</span>
+                <h2 class="section-title gs-reveal-up">Things I've designed,<br>tested and built.</h2>
+
+                <div class="projects-grid">
+                    <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
+                        data-tilt-glare data-tilt-max-glare="0.1">
+                        <div class="card-tags">
+                            <span class="card-tag">Rocker-bogie</span><span class="card-tag">Kinematics</span><span
+                                class="card-tag">IMU Stability</span><span class="card-tag">Power Systems</span>
+                        </div>
+                        <h3 class="card-title display-font">Six-Wheel Rocker-Bogie Rover</h3>
+                        <p class="card-desc">Mechanical design and mobility architecture for uneven terrain exploration, benchmarked against proven space robotics research.</p>
+                        <ul class="project-points">
+                            <li>Includes IMU stability logging, power budget management, and multi-motor drivetrain sizing.</li>
+                        </ul>
+                        <p class="project-meta"><strong>Status</strong> · In progress<br><strong>Context</strong> · Final-year project, BIET Jhansi</p>
+                        <div class="card-footer">
+                            <span>Final-year project</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
+                        data-tilt-glare data-tilt-max-glare="0.1">
+                        <div class="card-tags">
+                            <span class="card-tag">SolidWorks</span><span class="card-tag">Motion Study</span><span
+                                class="card-tag">Python</span><span class="card-tag">Kinematics</span>
+                        </div>
+                        <h3 class="card-title display-font">Planetary Gear Simulation</h3>
+                        <p class="card-desc">CAD modeling, assembly, and kinematic motion analysis of an epicyclic gear set in SolidWorks.</p>
+                        <ul class="project-points">
+                            <li>Developed a Python tool to compute gear ratios, tooth geometry, torque limits, and dynamic forces.</li>
+                        </ul>
+                        <p class="project-meta"><strong>Status</strong> · Completed</p>
+                        <div class="card-footer">
+                            <span>Sep 2025</span><span>Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
+                        data-tilt-glare data-tilt-max-glare="0.1">
+                        <div class="card-tags">
+                            <span class="card-tag">Materials Science</span><span class="card-tag">Tensile</span><span
+                                class="card-tag">Hardness</span><span class="card-tag">Impact</span>
+                        </div>
+                        <h3 class="card-title display-font">Heat Treatment of Mild Steel</h3>
+                        <p class="card-desc">Experimental study evaluating microstructure shifts across annealed, normalized, and water-quenched specimens.</p>
+                        <ul class="project-points">
+                            <li>Tested mechanical hardness, impact resistance, and tensile yield strength against untreated baselines.</li>
+                        </ul>
+                        <p class="project-meta"><strong>Status</strong> · Completed</p>
+                        <div class="card-footer">
+                            <span>Aug–Sep 2024</span><span>Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
+                        data-tilt-glare data-tilt-max-glare="0.1">
+                        <div class="card-tags">
+                            <span class="card-tag">Aerodynamics</span><span class="card-tag">BLDC</span><span
+                                class="card-tag">ESC</span><span class="card-tag">Flight Dynamics</span>
+                        </div>
+                        <h3 class="card-title display-font">Fixed-Wing RC Aircraft</h3>
+                        <p class="card-desc">Constructed and flight-tested a lightweight RC plane, analyzing pitch, roll, and yaw stability.</p>
+                        <ul class="project-points">
+                            <li>Configured BLDC motor thrust curves, ESC calibration, servo linkages, and gyroscopic feedback.</li>
+                        </ul>
+                        <p class="project-meta"><strong>Context</strong> · Drone Learners Club, 5-day workshop</p>
+                        <div class="card-footer">
+                            <span>Oct 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
+                        data-tilt-glare data-tilt-max-glare="0.1">
+                        <div class="card-tags">
+                            <span class="card-tag">React.js</span><span class="card-tag">CSS3</span><span
+                                class="card-tag">JavaScript</span>
+                        </div>
+                        <h3 class="card-title display-font">Solarpunk Corps Web Platform</h3>
+                        <p class="card-desc">Designed and deployed the club's interactive public website, focused on performance and responsive aesthetics.</p>
+                        <p class="project-meta"><strong>Status</strong> · Live</p>
+                        <div class="card-footer">
+                            <span>Jan 2026</span>
+                            <a href="https://solarpunkcorps.vercel.app" target="_blank" rel="noopener noreferrer"
+                                class="card-link magnetic interactive-element">↗ View Live</a>
+                        </div>
+                          </div>
+                </div>
+            </section>
+
+            <section id="spc" class="spc-section" data-bgcolor="var(--green-deep)">
+                <div class="spc-marquee" aria-label="Solarpunk Corps values">
+                    <div class="spc-marquee-track">
+                        <div class="spc-marquee-group">
+                            <span>· build with intention</span><span>· technology for people</span><span>· roots and circuits</span><span>· solarpunk</span><span>· learn sideways</span><span>· open to all</span>
+                            <span>· build with intention</span><span>· technology for people</span><span>· roots and circuits</span><span>· solarpunk</span><span>· learn sideways</span><span>· open to all</span>
+                            <span>· build with intention</span><span>· technology for people</span><span>· roots and circuits</span><span>· solarpunk</span><span>· learn sideways</span><span>· open to all</span>
+                            <span>· build with intention</span><span>· technology for people</span><span>· roots and circuits</span><span>· solarpunk</span><span>· learn sideways</span><span>· open to all</span>
+                        </div>
+                        <div class="spc-marquee-group" aria-hidden="true">
+                            <span>· build with intention</span><span>· technology for people</span><span>· roots and circuits</span><span>· solarpunk</span><span>· learn sideways</span><span>· open to all</span>
+                            <span>· build with intention</span><span>· technology for people</span><span>· roots and circuits</span><span>· solarpunk</span><span>· learn sideways</span><span>· open to all</span>
+                            <span>· build with intention</span><span>· technology for people</span><span>· roots and circuits</span><span>· solarpunk</span><span>· learn sideways</span><span>· open to all</span>
+                            <span>· build with intention</span><span>· technology for people</span><span>· roots and circuits</span><span>· solarpunk</span><span>· learn sideways</span><span>· open to all</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <span class="accent-font section-label gs-reveal-up">founded · Solarpunk Corps</span>
+                    <h2 class="spc-title display-font gs-reveal-up">Solarpunk Corps</h2>
+                    <div class="spc-intro">
+                        <p class="spc-quote accent-font gs-reveal-up">Technology that serves <em>people and nature.</em><br>Learning that flows sideways, not top-down.</p>
+
+                        <div class="spc-body text-block">
+                            <p>BIET's student robotics and sustainable tech collective: interdisciplinary, hands-on, and open to all departments without seniority barriers.</p>
+                        </div>
+
+                        <span class="spc-lore gs-reveal-up">Club lore: Sol and Nira, two autonomous systems revived in an abandoned outpost, bridging legacy knowledge with regenerative futures.</span>
+                    </div>
+
+                    <div class="spc-stats">
+                        <div class="spc-stat"><strong>40+</strong><span>Active members</span></div>
+                        <div class="spc-stat"><strong>25–30</strong><span>Student organisers</span></div>
+                        <div class="spc-stat"><strong>2</strong><span>Workshops · 7 days</span></div>
+                        <div class="spc-stat"><strong>300+</strong><span>Participants reached</span></div>
+                        <div class="spc-stat"><strong>100</strong><span>Shortlisted builders</span></div>
+                    </div>
+
+                    <div class="spc-events">
+                        <article class="spc-event-card gs-reveal-up">
+                            <span class="event-date">27–29 March 2026 · 3 days</span>
+                            <h4>Horizon 1.0</h4>
+                            <p>Self-funded, community-driven technical workshop. 50+ participants engaged in electronics simulation, AI/ML models, and a rapid prototype buildathon.</p>
+                            <div class="card-tags"><span class="card-tag">Electronics</span><span class="card-tag">AI / ML</span><span class="card-tag">Robotics</span><span class="card-tag">Buildathon</span></div>
+                        </article>
+                        <article class="spc-event-card gs-reveal-up">
+                            <span class="event-date">October 2026 · 4 days</span>
+                            <h4>Horizon 2.0</h4>
+                            <p>Advanced hands-on initiative where shortlisted student teams engineered full projects across robotics, intelligent automation, and sustainable hardware.</p>
+                            <div class="card-tags"><span class="card-tag">Robotics</span><span class="card-tag">AI</span><span class="card-tag">Sustainability</span></div>
+                        </article>
+                    </div>
+                    <p class="spc-body" style="text-align:center;font-size:.95rem;">My role: curriculum design, technical documentation, community outreach, and cross-team project coordination.</p>
+                    <div class="btn-row" style="justify-content: center;">
+                        <a href="https://solarpunkcorps.vercel.app" target="_blank" rel="noopener noreferrer"
+                            class="btn magnetic interactive-element" data-strength="40">↗ Visit SPC Website</a>
+                        <a href="https://www.instagram.com/we.the.spc" target="_blank" rel="noopener noreferrer"
+                            class="btn magnetic interactive-element" data-strength="40">@we.the.spc on IG</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="horizon" class="horizon-section container">
+                <span class="accent-font section-label gs-reveal-up">Solarpunk Corps · workshops</span>
+                <div class="horizon-intro">
+                    <h2 class="section-title gs-reveal-up">Horizon in<br>motion.</h2>
+                    <p>Explore the people, ideas and energy behind the Solarpunk Corps workshops. Hover over a frame to
+                        open it.</p>
+                </div>
+                <div class="horizon-gallery" id="horizon-gallery" role="group"
+                    aria-label="Horizon workshop image gallery">
+                    <div class="horizon-card" role="img" aria-label="Horizon workshop image 1">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=80"
+                            alt="Students gathered for a workshop" loading="lazy">
+                        <span class="horizon-letter" aria-hidden="true">H</span><span
+                            class="horizon-caption"><small>Build together</small><strong>Ideas become real when we make
+                                them together.</strong></span>
+                    </div>
+                    <div class="horizon-card" role="img" aria-label="Horizon workshop image 2">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80"
+                            alt="A community event in progress" loading="lazy">
+                        <span class="horizon-letter" aria-hidden="true">O</span><span
+                            class="horizon-caption"><small>Learn sideways</small><strong>Every participant brings
+                                something to the table.</strong></span>
+                    </div>
+                    <div class="horizon-card" role="img" aria-label="Horizon workshop image 3">
+                        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80"
+                            alt="A speaker sharing ideas on stage" loading="lazy">
+                        <span class="horizon-letter" aria-hidden="true">R</span><span
+                            class="horizon-caption"><small>Share knowledge</small><strong>Curiosity is the beginning of
+                                every build.</strong></span>
+                    </div>
+                    <div class="horizon-card" role="img" aria-label="Horizon workshop image 4">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80"
+                            alt="Students collaborating around a table" loading="lazy">
+                        <span class="horizon-letter" aria-hidden="true">I</span><span
+                            class="horizon-caption"><small>Work as equals</small><strong>Different disciplines, one
+                                shared workshop.</strong></span>
+                    </div>
+                    <div class="horizon-card" role="img" aria-label="Horizon workshop image 5">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80"
+                            alt="An energetic evening event" loading="lazy">
+                        <span class="horizon-letter" aria-hidden="true">Z</span><span
+                            class="horizon-caption"><small>Make room for wonder</small><strong>Learning should feel
+                                alive.</strong></span>
+                    </div>
+                    <div class="horizon-card" role="img" aria-label="Horizon workshop image 6">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+                            alt="A team working together" loading="lazy">
+                        <span class="horizon-letter" aria-hidden="true">O</span><span
+                            class="horizon-caption"><small>Build a community</small><strong>Good teams make better
+                                things possible.</strong></span>
+                    </div>
+                    <div class="horizon-card" role="img" aria-label="Horizon workshop image 7">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80"
+                            alt="Friends sharing an outdoor gathering" loading="lazy">
+                        <span class="horizon-letter" aria-hidden="true">N</span><span
+                            class="horizon-caption"><small>Find your people</small><strong>A place to learn, experiment
+                                and belong.</strong></span>
+                    </div>
+                </div>
+                <p class="horizon-note">HORIZON · ROBOTICS · AI / ML · SUSTAINABILITY · BUILT AT BIET JHANSI</p>
+            </section>
+
+            <section id="experience" class="container">
+                <span class="accent-font section-label gs-reveal-up">journey</span>
+                <h2 class="section-title gs-reveal-up">Experience & Leadership</h2>
+
+                <div class="experience-simple">
+                    <div class="toolbar">
+                        <div class="chips" id="chips" role="group" aria-label="Filter by type"></div>
+                        <div class="seg" id="view" role="group" aria-label="View">
+                            <button type="button" data-v="list" aria-pressed="true">List</button>
+                            <button type="button" data-v="gantt" aria-pressed="false">Timeline</button>
+                        </div>
+                    </div>
+
+                    <section id="ganttView">
+                        <div class="chart" id="chart" tabindex="-1"></div>
+                        <p class="hint">Click a role to highlight what ran alongside it, or a month to see everything active then. Hover a bar for its description. A dashed edge marks roles that are still ongoing, and a diamond marks an event.</p>
+                    </section>
+
+                    <section id="listView" hidden>
+                        <div class="list" id="list"></div>
+                    </section>
+                </div>
+            </section>
+
+            <section id="education" class="container">
+                <span class="accent-font section-label gs-reveal-up">academic background</span>
+                <h2 class="section-title gs-reveal-up">Education &amp; Certifications</h2>
+                <div class="education-grid">
+                    <div>
+                        <h3>Education</h3>
+                        <div class="education-row">
+                            <strong>B.Tech, Mechanical Engineering</strong>
+                            <span>Bundelkhand Institute of Engineering and Technology, Jhansi, U.P.</span>
+                            <span class="education-date">September 2023 to June 2027</span>
+                        </div>
+                        <div class="education-row">
+                            <span>Fluid Mechanics, Thermodynamics, Machine Design, Materials Engineering,
+                                Manufacturing</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Certifications and languages</h3>
+                        <div class="education-row">
+                            <strong>SOLIDWORKS Design Associate (CSWA)</strong>
+                            <span>Certified by Dassault Systèmes</span>
+                            <span class="education-date">October 2026</span>
+                        </div>
+                        <div class="education-row">
+                            <strong>Building the Smart World with IoT</strong>
+                            <span>AI and Robotics Club Online Program, Technova Society, Sharda University</span>
+                            <span class="education-date">31 Jan to 1 Feb 2026</span>
+                        </div>
+                        <div class="education-row">
+                            <strong>Python for Beginners</strong>
+                            <span>Simplilearn</span>
+                            <span class="education-date">January 2025</span>
+                        </div>
+                        <div class="education-row">
+                            <strong>Hindi, English</strong>
+                            <span>Hindi native, English working proficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="container">
+                <span class="accent-font section-label gs-reveal-up">what I'm learning and building with</span>
+                <h2 class="section-title gs-reveal-up">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3>CAD, simulation and testing</h3>
+                        <div class="skill-level"><span>Strong</span>
+                            <div class="card-tags"><span class="card-tag">SolidWorks</span><span
+                                    class="card-tag">Assemblies</span><span class="card-tag">Motion Study</span></div>
+                        </div>
+                        <div class="skill-level"><span>Familiar</span>
+                            <div class="card-tags"><span class="card-tag">ANSYS FEA</span><span
+                                    class="card-tag">Onshape</span><span class="card-tag">FreeCAD</span><span
+                                    class="card-tag">MATLAB / Simulink</span><span class="card-tag">Ultimaker
+                                    Cura</span><span class="card-tag">Tensile, hardness, impact testing</span></div>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Code and electronics</h3>
+                        <div class="skill-level"><span>Intermediate</span>
+                            <div class="card-tags"><span class="card-tag">Python</span><span
+                                    class="card-tag">NumPy</span><span class="card-tag">pandas</span><span
+                                    class="card-tag">Matplotlib</span><span class="card-tag">Seaborn</span></div>
+                        </div>
+                        <div class="skill-level"><span>Familiar</span>
+                            <div class="card-tags"><span class="card-tag">C</span><span class="card-tag">C++</span><span
+                                    class="card-tag">Arduino Uno</span><span class="card-tag">ESP32</span><span
+                                    class="card-tag">KiCad</span><span class="card-tag">OpenCV</span><span
+                                    class="card-tag">YOLO</span><span class="card-tag">MediaPipe</span><span
+                                    class="card-tag">Hugging Face</span><span class="card-tag">Webots</span></div>
+                        </div>
+                        <div class="skill-level"><span>Web and tools</span>
+                            <div class="card-tags"><span class="card-tag">React.js</span><span
+                                    class="card-tag">JavaScript</span><span class="card-tag">HTML / CSS</span><span
+                                    class="card-tag">Git / GitHub</span><span class="card-tag">Linux</span><span
+                                    class="card-tag">Raspberry Pi</span><span class="card-tag">Docker</span></div>
+                        </div>
+                        <div class="skill-level"><span>Learning now</span>
+                            <div class="card-tags"><span class="card-tag">ROS2</span><span
+                                    class="card-tag">Gazebo</span><span class="card-tag">KiCad PCB design</span></div>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Professional &amp; Leadership</h3>
+                        <div class="skill-level"><span>Leadership</span>
+                            <div class="card-tags">
+                                <span class="card-tag">Team Building</span>
+                                <span class="card-tag">Club Founder &amp; General Secretary</span>
+                                <span class="card-tag">Team Management &amp; Initiative</span>
+                            </div>
+                        </div>
+                        <div class="skill-level"><span>Management</span>
+                            <div class="card-tags">
+                                <span class="card-tag">Event &amp; Project Management</span>
+                                <span class="card-tag">2 Multi-Day Workshops (300+ participants)</span>
+                                <span class="card-tag">Resourcefulness &amp; Planning</span>
+                            </div>
+                        </div>
+                        <div class="skill-level"><span>Speaking &amp; Teaching</span>
+                            <div class="card-tags">
+                                <span class="card-tag">Public Speaking (250+ students, 50 coordinators &amp; faculty)</span>
+                                <span class="card-tag">Technical &amp; Mentorship</span>
+                                <span class="card-tag">Curriculum Design</span>
+                            </div>
+                        </div>
+                        <div class="skill-level"><span>Collaboration</span>
+                            <div class="card-tags">
+                                <span class="card-tag">Cross-Functional Collaboration</span>
+                                <span class="card-tag">Stakeholder Handling</span>
+                                <span class="card-tag">Problem Solving</span>
+                                <span class="card-tag">Fast Learner</span>
+                            </div>
+                        </div>
+                        <div class="skill-level"><span>Execution</span>
+                            <div class="card-tags">
+                                <span class="card-tag">Self-Directed Learning</span>
+                                <span class="card-tag">Hands-on Iteration (Hit &amp; Trial)</span>
+                                <span class="card-tag">Research &amp; Synthesis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact-section">
+                <span class="accent-font section-label gs-reveal-up">say hello</span>
+                <div>
+                    <h2 class="contact-title display-font">Let's build something.</h2><span
+                        class="typewriter-cursor display-font contact-title">_</span>
+                </div>
+                <p class="contact-body gs-reveal-up">Whether it's robots, ideas, collaborations, or conversations, I'm always open to connect.</p>
+
+                <a href="mailto:balajee.soni0504@gmail.com" class="btn email-btn magnetic interactive-element"
+                    data-strength="60">✉ balajee.soni0504@gmail.com</a>
+
+                <div class="social-links gs-reveal-up">
+                    <a href="https://github.com/Vixy-we" target="_blank" rel="noopener noreferrer"
+                        class="social-link interactive-element">
+                        <span>GitHub</span><span>github.com/Vixy-we ↗</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bala-jee-soni" target="_blank" rel="noopener noreferrer"
+                        class="social-link interactive-element">
+                        <span>LinkedIn</span><span>linkedin.com/in/bala-jee-soni ↗</span>
+                    </a>
+                    <a href="https://www.instagram.com/balajee.soni_" target="_blank" rel="noopener noreferrer"
+                        class="social-link interactive-element">
+                        <span>Instagram</span><span>@balajee.soni_ ↗</span>
+                    </a>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-left">Bala Jee Soni · Jhansi, India · 2026</div>
+                <div class="footer-right">Built with intention. ✦</div>
+            </footer>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
