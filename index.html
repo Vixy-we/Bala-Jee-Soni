@@ -60,13 +60,13 @@
                     <div class="hero-gallery" aria-label="Two overlapping glass photo cards">
                         <article class="glass-card card-one">
                             <img
-                                src="pic2.png"
+                                src="images/pic2.png"
                                 alt="Bala Jee Soni standing outdoors"
                             >
                         </article>
                         <article class="glass-card card-two">
                             <img
-                                src="pic1.jpg"
+                                src="images/pic1.jpg"
                                 alt="Bala Jee Soni presenting a sustainability project"
                             >
                         </article>
@@ -275,11 +275,12 @@
                 <h2 class="section-title gs-reveal-up">Things I've designed,<br>tested and built.</h2>
 
                 <div class="projects-grid">
+
+                    <!-- 1. Rover -->
                     <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
                         data-tilt-glare data-tilt-max-glare="0.1">
-                        <div class="card-tags">
-                            <span class="card-tag">Rocker-bogie</span><span class="card-tag">Kinematics</span><span
-                                class="card-tag">IMU Stability</span><span class="card-tag">Power Systems</span>
+                        <div class="card-photo">
+                            <img src="images/projects/rover.jpg" alt="Six-wheel rocker-bogie rover" loading="lazy" onerror="this.style.display='none'">
                         </div>
                         <h3 class="card-title display-font">Six-Wheel Rocker-Bogie Rover</h3>
                         <p class="card-desc">Mechanical design and mobility architecture for uneven terrain exploration, benchmarked against proven space robotics research.</p>
@@ -292,11 +293,43 @@
                         </div>
                     </div>
 
+                    <!-- 2. Robotic Arm -->
                     <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
                         data-tilt-glare data-tilt-max-glare="0.1">
-                        <div class="card-tags">
-                            <span class="card-tag">SolidWorks</span><span class="card-tag">Motion Study</span><span
-                                class="card-tag">Python</span><span class="card-tag">Kinematics</span>
+                        <div class="card-photo">
+                            <img src="images/robotic-arm.png" alt="5-DOF robotic arm" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <h3 class="card-title display-font">5-DOF Robotic Arm</h3>
+                        <p class="card-desc">Designed a 5-DOF robotic arm in SolidWorks with a base, four links and an end effector, published with an interactive 3D viewer and full CAD files.</p>
+                        <p class="project-meta"><strong>Status</strong> · Design complete</p>
+                        <div class="card-footer">
+                            <span>July 2026</span>
+                            <a href="https://vixy-we.github.io/SSSS/" target="_blank" rel="noopener noreferrer"
+                                class="card-link magnetic interactive-element">↗ View 3D Model</a>
+                        </div>
+                    </div>
+
+                    <!-- 3. Robotic Gripper -->
+                    <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
+                        data-tilt-glare data-tilt-max-glare="0.1">
+                        <div class="card-photo">
+                            <img src="images/projects/robotic-gripper.jpg" alt="Robotic gripper" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <h3 class="card-title display-font">Robotic Gripper</h3>
+                        <p class="card-desc">Designed a robotic gripper in SolidWorks as an end effector for the arm, published with an interactive 3D viewer and full CAD files.</p>
+                        <p class="project-meta"><strong>Status</strong> · Design complete</p>
+                        <div class="card-footer">
+                            <span>Month Year</span>
+                            <a href="https://vixy-we.github.io/YOUR-GRIPPER-REPO/" target="_blank" rel="noopener noreferrer"
+                                class="card-link magnetic interactive-element">↗ View 3D Model</a>
+                        </div>
+                    </div>
+
+                    <!-- 4. Planetary Gear -->
+                    <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
+                        data-tilt-glare data-tilt-max-glare="0.1">
+                        <div class="card-photo">
+                            <img src="images/projects/planetary-gear.jpg" alt="Planetary gear simulation" loading="lazy" onerror="this.style.display='none'">
                         </div>
                         <h3 class="card-title display-font">Planetary Gear Simulation</h3>
                         <p class="card-desc">CAD modeling, assembly, and kinematic motion analysis of an epicyclic gear set in SolidWorks.</p>
@@ -309,28 +342,11 @@
                         </div>
                     </div>
 
+                    <!-- 5. RC Aircraft -->
                     <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
                         data-tilt-glare data-tilt-max-glare="0.1">
-                        <div class="card-tags">
-                            <span class="card-tag">Materials Science</span><span class="card-tag">Tensile</span><span
-                                class="card-tag">Hardness</span><span class="card-tag">Impact</span>
-                        </div>
-                        <h3 class="card-title display-font">Heat Treatment of Mild Steel</h3>
-                        <p class="card-desc">Experimental study evaluating microstructure shifts across annealed, normalized, and water-quenched specimens.</p>
-                        <ul class="project-points">
-                            <li>Tested mechanical hardness, impact resistance, and tensile yield strength against untreated baselines.</li>
-                        </ul>
-                        <p class="project-meta"><strong>Status</strong> · Completed</p>
-                        <div class="card-footer">
-                            <span>Aug–Sep 2024</span><span>Completed</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
-                        data-tilt-glare data-tilt-max-glare="0.1">
-                        <div class="card-tags">
-                            <span class="card-tag">Aerodynamics</span><span class="card-tag">BLDC</span><span
-                                class="card-tag">ESC</span><span class="card-tag">Flight Dynamics</span>
+                        <div class="card-photo">
+                            <img src="images/rc-aircraft.jpg" alt="Fixed-wing RC aircraft" loading="lazy" onerror="this.style.display='none'">
                         </div>
                         <h3 class="card-title display-font">Fixed-Wing RC Aircraft</h3>
                         <p class="card-desc">Constructed and flight-tested a lightweight RC plane, analyzing pitch, roll, and yaw stability.</p>
@@ -343,11 +359,11 @@
                         </div>
                     </div>
 
+                    <!-- 6. Web Platform -->
                     <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
                         data-tilt-glare data-tilt-max-glare="0.1">
-                        <div class="card-tags">
-                            <span class="card-tag">React.js</span><span class="card-tag">CSS3</span><span
-                                class="card-tag">JavaScript</span>
+                        <div class="card-photo">
+                            <img src="images/spc-website.png" alt="Solarpunk Corps website" loading="lazy" onerror="this.style.display='none'">
                         </div>
                         <h3 class="card-title display-font">Solarpunk Corps Web Platform</h3>
                         <p class="card-desc">Designed and deployed the club's interactive public website, focused on performance and responsive aesthetics.</p>
@@ -357,7 +373,25 @@
                             <a href="https://solarpunkcorps.vercel.app" target="_blank" rel="noopener noreferrer"
                                 class="card-link magnetic interactive-element">↗ View Live</a>
                         </div>
-                          </div>
+                    </div>
+
+                    <!-- 7. Heat Treatment -->
+                    <div class="project-card tilt-card" data-tilt data-tilt-max="8" data-tilt-speed="400"
+                        data-tilt-glare data-tilt-max-glare="0.1">
+                        <div class="card-photo">
+                            <img src="images/projects/heat-treatment.jpg" alt="Heat treatment of mild steel" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <h3 class="card-title display-font">Heat Treatment of Mild Steel</h3>
+                        <p class="card-desc">Experimental study evaluating microstructure shifts across annealed, normalized, and water-quenched specimens.</p>
+                        <ul class="project-points">
+                            <li>Tested mechanical hardness, impact resistance, and tensile yield strength against untreated baselines.</li>
+                        </ul>
+                        <p class="project-meta"><strong>Status</strong> · Completed</p>
+                        <div class="card-footer">
+                            <span>Aug–Sep 2024</span><span>Completed</span>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
