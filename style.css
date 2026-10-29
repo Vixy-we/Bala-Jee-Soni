@@ -408,13 +408,26 @@
             font-family: var(--font-body);
             font-size: 0.9rem;
             letter-spacing: 1px;
-            transition: all 0.3s ease;
+            /* Only the hover colors transition; GSAP owns opacity and transform. */
+            transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
         .btn:hover {
             border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .btn-cv {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--bg);
+            font-weight: 500;
+        }
+
+        .btn-cv:hover {
+            background: transparent;
             color: var(--gold);
         }
 
@@ -798,8 +811,10 @@
             height: 100%;
         }
 
-        .project-card:hover {
-            border-color: var(--gold);
+        @media (hover: hover) and (pointer: fine) {
+            .project-card:hover {
+                border-color: var(--gold);
+            }
         }
 
         .project-card>* {

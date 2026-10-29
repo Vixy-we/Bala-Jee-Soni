@@ -288,10 +288,12 @@
             initParticles();
             animateParticles();
 
-            // Vanilla Tilt Init
-            VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
-                max: 8, speed: 400, glare: true, "max-glare": 0.05
-            });
+            // Tilt only on fine pointers; phones and tablets keep flat cards.
+            if (!isTouch && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+                    max: 8, speed: 400, glare: true, "max-glare": 0.05
+                });
+            }
 
             // Loading Timeline
             const tlLoader = gsap.timeline();
@@ -315,7 +317,9 @@
                 .from('.hero-label', { y: 20, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.4")
                 .from('.hero-name', { y: 40, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.6")
                 .from('.hero-desc', { y: 20, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
-                .from('.btn-row .btn', { y: 20, opacity: 0, duration: 0.8, stagger: 0.1, ease: "power3.out" }, "-=0.6")
+                .fromTo('.hero .btn-row .btn',
+                    { y: 20, opacity: 0 },
+                    { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: "power3.out" }, "-=0.6")
                 .from('.scroll-indicator', { opacity: 0, duration: 1 }, "-=0.2");
 
             // Global ScrollTriggers
