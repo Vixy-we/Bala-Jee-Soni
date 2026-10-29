@@ -12,6 +12,9 @@
             --font-display: 'Cormorant Garamond', serif;
             --font-body: 'DM Sans', sans-serif;
             --font-accent: 'Caveat', cursive;
+
+            --section-space: clamp(3rem, 7vh, 6rem);
+            --section-space-lg: clamp(4rem, 9vh, 7.5rem);
         }
 
         * {
@@ -165,7 +168,7 @@
         }
 
         section {
-            padding: 10vh 5vw;
+            padding: var(--section-space) 5vw;
             position: relative;
         }
 
@@ -243,7 +246,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 3rem;
+            gap: clamp(2rem, 3vw, 3rem);
             width: 100%;
             position: relative;
             z-index: 1;
@@ -384,7 +387,7 @@
             font-size: clamp(1rem, 1.5vw, 1.2rem);
             max-width: 480px;
             line-height: 1.6;
-            margin-bottom: 3rem;
+            margin-bottom: clamp(1.75rem, 3vh, 2.5rem);
             position: relative;
             z-index: 2;
         }
@@ -490,18 +493,17 @@
         @media (max-width: 860px) {
             .hero {
                 height: auto;
-                min-height: 100vh;
-                min-height: 100svh;
+                min-height: 0;
                 align-items: flex-start;
-                padding-top: 12vh;
-                padding-bottom: 10vh;
+                padding-top: clamp(5.5rem, 10vh, 7rem);
+                padding-bottom: clamp(2.5rem, 5vh, 3.5rem);
                 overflow: visible;
             }
 
             .hero-container {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 3.5rem;
+                gap: 2rem;
             }
 
             .hero-content {
@@ -511,7 +513,7 @@
             }
 
             .hero-desc {
-                margin-bottom: 2.25rem;
+                margin-bottom: 1.5rem;
             }
 
             .hero-gallery {
@@ -549,8 +551,12 @@
 
         @media (max-width: 480px) {
             .hero {
-                padding-top: 10vh;
-                padding-bottom: 8vh;
+                padding-top: 5rem;
+                padding-bottom: 2.5rem;
+            }
+
+            .hero-container {
+                gap: 1.5rem;
             }
 
             .hero-gallery {
@@ -559,10 +565,11 @@
 
             .hero-desc {
                 font-size: 1rem;
+                margin-bottom: 1.5rem;
             }
 
             .btn-row {
-                gap: 1rem;
+                gap: .75rem;
             }
         }
 
@@ -794,7 +801,7 @@
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
             gap: 2rem;
             margin-top: 4rem;
         }
@@ -903,7 +910,7 @@
         /* SPC Section */
         .spc-section {
             text-align: center;
-            padding: 15vh 5vw;
+            padding: var(--section-space-lg) 5vw;
         }
 
         .spc-marquee {
@@ -1043,7 +1050,7 @@
 
         .spc-events {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
             gap: 1.8rem;
             max-width: 1040px;
             margin: 0 auto 2.5rem;
@@ -1134,7 +1141,7 @@
 
         /* Horizon image accordion */
         .horizon-section {
-            padding: 10vh 5vw;
+            padding: var(--section-space) 5vw;
         }
 
         .horizon-intro {
@@ -1265,10 +1272,42 @@
             }
         }
 
+        @media (hover: none) {
+            .horizon-gallery {
+                overflow-x: auto;
+                overflow-y: hidden;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+
+            .horizon-gallery::-webkit-scrollbar {
+                display: none;
+            }
+
+            .horizon-card {
+                flex: 0 0 clamp(240px, 68vw, 420px);
+                scroll-snap-align: start;
+            }
+
+            .horizon-card::after {
+                opacity: .65;
+            }
+
+            .horizon-letter {
+                opacity: .75;
+            }
+
+            .horizon-caption {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
         /* Skills and education */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
             gap: 2.5rem 3vw;
             margin-top: 3rem;
         }
@@ -1355,8 +1394,9 @@
             margin-top: 2.5rem;
         }
 
-        /* The chart view carries no padding of its own; the section already pads the block. */
-        #experience .experience-simple #ganttView {
+        /* The chart and list views carry no padding of their own; the section already pads the block. */
+        #experience .experience-simple #ganttView,
+        #experience .experience-simple #listView {
             padding: 0;
         }
 
@@ -1715,17 +1755,17 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: 56px;
+            gap: 48px;
             max-width: 960px;
             margin: 24px auto 0;
-            padding: 8px 0 18vh;
+            padding: 8px 0 3rem;
         }
 
         #experience .experience-simple .rail {
             position: absolute;
             left: 50%;
             top: 8px;
-            bottom: 18vh;
+            bottom: 3rem;
             width: 1px;
             background: linear-gradient(to bottom, transparent, var(--experience-line) 4%, var(--experience-line) 96%, transparent);
             pointer-events: none;
@@ -1923,7 +1963,7 @@
         /* Contact Section */
         .contact-section {
             text-align: center;
-            padding: 15vh 5vw;
+            padding: var(--section-space-lg) 5vw;
         }
 
         .contact-title {
@@ -2048,4 +2088,175 @@
 
         .text-block p:last-child {
             margin-bottom: 0;
+        }
+
+        /* Tighter section rhythm on tablets and phones */
+        @media (max-width: 1024px) {
+            :root {
+                --section-space: clamp(2.5rem, 4vw, 4.5rem);
+                --section-space-lg: clamp(3rem, 5vw, 5rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --section-space: 2.75rem;
+                --section-space-lg: 3.5rem;
+            }
+
+            .section-title {
+                margin-bottom: 1.25rem;
+            }
+
+            .about-grid {
+                gap: 2rem;
+            }
+
+            .about-text p {
+                margin-bottom: 1rem;
+            }
+
+            .about-detail {
+                margin-top: 1.25rem;
+            }
+
+            .projects-grid {
+                margin-top: 2.25rem;
+            }
+
+            .skills-grid {
+                margin-top: 2rem;
+            }
+
+            .education-grid {
+                margin-top: 2.25rem;
+            }
+
+            .marquee-section {
+                padding: 2.5rem 0;
+            }
+
+            .marquee-row {
+                margin-bottom: .65rem;
+            }
+
+            .tech-item {
+                min-width: 160px;
+                gap: .75rem;
+                padding: 1.4rem 2rem;
+            }
+
+            .tech-item i,
+            .tech-item svg {
+                width: 3.25rem;
+                height: 3.25rem;
+                font-size: 3.25rem;
+            }
+
+            .tech-item span {
+                font-size: 1.1rem;
+            }
+
+            .spc-marquee {
+                margin-bottom: 2.5rem;
+            }
+
+            .spc-quote {
+                margin-bottom: 1.75rem;
+            }
+
+            .spc-body {
+                margin-bottom: 2rem;
+            }
+
+            .spc-lore {
+                margin-bottom: 2.5rem;
+            }
+
+            .spc-stats {
+                margin-bottom: 2.25rem;
+            }
+
+            .spc-events {
+                margin-bottom: 2rem;
+            }
+
+            .horizon-intro {
+                margin-bottom: 1.5rem;
+            }
+
+            #experience .experience-simple {
+                margin-top: 1.75rem;
+            }
+
+            #experience .experience-simple .list {
+                gap: 38px;
+                padding-bottom: 1.5rem;
+            }
+
+            #experience .experience-simple .rail {
+                bottom: 1.5rem;
+            }
+
+            #experience .experience-simple .chip {
+                min-height: 44px;
+                padding: 9px 14px;
+                font-size: 13px;
+            }
+
+            #experience .experience-simple .seg button {
+                min-height: 44px;
+                padding: 8px 15px;
+                font-size: 13px;
+            }
+
+            .card-link {
+                display: inline-flex;
+                align-items: center;
+                min-height: 44px;
+            }
+
+            .contact-title {
+                margin-bottom: 1rem;
+            }
+
+            .contact-body {
+                margin-bottom: 2rem;
+            }
+
+            .email-btn {
+                max-width: 100%;
+                padding: 1rem 1.25rem;
+                margin-bottom: 1.75rem;
+                font-size: clamp(.95rem, 4vw, 1.3rem);
+                overflow-wrap: anywhere;
+            }
+
+            .social-links {
+                margin-top: 2.5rem;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --section-space: 2.25rem;
+                --section-space-lg: 3rem;
+            }
+
+            .horizon-gallery {
+                height: 320px;
+            }
+
+            .spc-stats {
+                gap: .8rem;
+            }
+
+            .spc-stat {
+                padding: 1.4rem 1rem;
+            }
+
+            .card-footer {
+                margin-top: 1.5rem;
+            }
         }
